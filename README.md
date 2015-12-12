@@ -29,6 +29,5 @@ In order to run these programs you must download and install the following modul
 
 ### Aknowledgements:
 
-I would like to thanks Paisaje Transversal to give me the opportunity and support to develop this program. I also
-wanted to thanks Alberto Santos and the Master GIS Programming with Python in which this project has been hosted.
-Finally, many thanks to the StackOverflow community to their altruistic help.
+I would like to thanks [Paisaje Transversal](http://www.paisajetransversal.org/) to give me the opportunity and support to develop this program. I also wanted to thanks *Alberto Santos* and the [Master GIS Programming with Python](http://geospatialtraininges.com/cursos-gis/master-programacion-gis-con-python/) in which this project has been hosted.
+Finally, many thanks to the *Stack Overflow* community to their altruistic help.

@@ -28,7 +28,11 @@ Folder file containing:
 
 ### Requisites:
 
-In order to run these programs you must download and install the following modules:
+First, it is necessary to get your Twitter and CartoDB APIs from the following links:
+- Twitter: https://apps.twitter.com/
+- CartoDB: http://docs.cartodb.com/cartodb-platform/sql-api/authentication/
+
+In addition, in order to run these programs you must download and install the following modules:
 
 - Tweepy: https://github.com/tweepy/tweepy
 - Geopy: https://github.com/geopy/geopy

@@ -11,10 +11,10 @@ geolocator = Nominatim()
 from textblob import TextBlob
 
 #declare variables
-ckey = "SyTW5RSIptIAfl9CeWorlA9QT"
-csecret = "tR2o8yJVzzIfrUmJfWjXwLoVmfGAEhBXcbZniXlcjNhk4mfr2x"
-atoken = "32976838-QtWFoGnGC4Mjb49I75Ef2OBkmis80dHAtdnUFGhQr"
-asecret = "0C1oROu5YDVfmAtSQHKMQGFXNUeoldK4dzILiNNzUKPLm"
+ckey = "CONSUMER_KEY"
+csecret = "CONSUMER_SECRET"
+atoken = "ACCESS_TOKEN"
+asecret = "ACCESS_SECRET"
 
 OAUTH_KEYS = {'consumer_key':ckey, 'consumer_secret':csecret, 'access_token_key':atoken, 'access_token_secret':asecret}
 auth = tweepy.OAuthHandler(OAUTH_KEYS['consumer_key'], OAUTH_KEYS['consumer_secret'])
@@ -26,10 +26,10 @@ headers = 'Time; User; Text; Sentiment; Question; Place; Latitude; Longitude;'
 saveFile.write(headers + '\n')
 
 #print tweets
-for tweet in tweepy.Cursor(api.search, q ='#tweetdatapoint').items():
+for tweet in tweepy.Cursor(api.search, q ='#hashtag').items():
     '''
     Parameters (*required):
-    q*: word, hashtag of interest [#paseosFuencarral]
+    q*: word, hashtag of interest [#hashtag]
     geocode: returns tweets by users located within a given radius of the given latitude/longitude [37.781157,-122.398720,1km]
     lang: language [es]
     result_type: [mixed, popular or recent]

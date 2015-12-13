@@ -48,7 +48,6 @@ beginning to end.
 Finally, you can change the trails setting for your visualization. These are the burst effects that happen after 
 the point first appears, and leave a visual “trail” after the point disappears.
 
-
 In the standard Torque visualization, data points disappear after they appear on the map. If you switch the “cumulative” 
 toggle on, points will stay on the map, and build upon each other. Often, it’s best to bring down the opacity of your 
 markers when you’re using the cumulative visualization so that the effect of points layering over one another is noticable.

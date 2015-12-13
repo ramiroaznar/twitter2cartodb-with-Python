@@ -14,7 +14,7 @@ I used *tweet2csv.py* with the following modifications:
 
 ## csv2cartodb.py
 
-No modifcations were added in this script.
+No modifcations were added to this script.
 
 ## Torque Cat
 

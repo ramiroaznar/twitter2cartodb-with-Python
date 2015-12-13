@@ -18,6 +18,14 @@ latitude and longitude of all the tweets from a certain hashtag of a past event.
 This program imports from a csv file the twitter information to a CartoDB dataset. It also contains
 the instructions to generate a animated point data map using Torque.
 
+## example
+
+Folder file containing:
+- readme.md,
+- tweets2csv.py modified,
+- csv2cartodb.py,
+- and map.png.
+
 ### Requisites:
 
 In order to run these programs you must download and install the following modules:

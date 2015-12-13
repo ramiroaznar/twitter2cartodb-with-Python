@@ -20,7 +20,7 @@ No modifcations were added to this script.
 
 After importing the *AccordDeParis.csv* file to CartoDB, the dataset was slightly edited. Rows with values different
 from "Negative", "Neutral" and "Positive" within the sentiment column were removed using the filter tool. The new 
-dataset created from this query was saved. Finally, a Troque Cat map was generated using the sentiment column as the
+dataset created from this query was saved. Finally, a Torque Cat map was generated using the sentiment column as the
 Category Column. 
 
 The resulting map can be seen [here](http://bit.ly/1RLi7Fm), also a screen shot (*map.png*) has been added to this repository.

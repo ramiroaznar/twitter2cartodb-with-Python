@@ -1,13 +1,3 @@
-'''
-Author: Ramiro Aznar
-Web: www.ramiroaznar.com
-Language: Python
-Date: December 12th 2015
-Code: print and save tweets from a certain hashtag from the past, all tweets are 
-categorized according to their sentiment, question and location if they have geo tag
-Note: to speed up the code, comment print statements
-'''
-
 #import modules
 import tweepy
 from tweepy import Stream
@@ -21,17 +11,17 @@ geolocator = Nominatim()
 from textblob import TextBlob
 
 #declare variables
-ckey = "CONSUMER_KEY"
-csecret = "CONSUMER_SECRET"
-atoken = "ACCESS_TOKEN"
-asecret = "ACCESS_SECRET"
+ckey = "SyTW5RSIptIAfl9CeWorlA9QT"
+csecret = "tR2o8yJVzzIfrUmJfWjXwLoVmfGAEhBXcbZniXlcjNhk4mfr2x"
+atoken = "32976838-QtWFoGnGC4Mjb49I75Ef2OBkmis80dHAtdnUFGhQr"
+asecret = "0C1oROu5YDVfmAtSQHKMQGFXNUeoldK4dzILiNNzUKPLm"
 
 OAUTH_KEYS = {'consumer_key':ckey, 'consumer_secret':csecret, 'access_token_key':atoken, 'access_token_secret':asecret}
 auth = tweepy.OAuthHandler(OAUTH_KEYS['consumer_key'], OAUTH_KEYS['consumer_secret'])
 api = tweepy.API(auth)
 
 #open file
-saveFile = open('tweets.csv', 'a')
+saveFile = open('file.csv', 'a')
 headers = 'Time; User; Text; Sentiment; Question; Place; Latitude; Longitude;'
 saveFile.write(headers + '\n')
 
@@ -39,7 +29,7 @@ saveFile.write(headers + '\n')
 for tweet in tweepy.Cursor(api.search, q ='#tweetdatapoint').items():
     '''
     Parameters (*required):
-    q*: word, hashtag of interest [#hashtag]
+    q*: word, hashtag of interest [#paseosFuencarral]
     geocode: returns tweets by users located within a given radius of the given latitude/longitude [37.781157,-122.398720,1km]
     lang: language [es]
     result_type: [mixed, popular or recent]
@@ -84,7 +74,7 @@ for tweet in tweepy.Cursor(api.search, q ='#tweetdatapoint').items():
         print "==========="
 
         #save tweets
-        saveThis = str(moment) + '; ' + string.encode('utf8') + '; ' + user + '; ' + sentiment + '; ' + question + '; ' + place + '; ' + str(latitude) + '; ' + str(longitude) + '; '
+        saveThis = str(moment) + '; ' + str(string.encode('ascii', 'ignore')) + '; ' + user + '; ' + sentiment + '; ' + question + '; ' + place + '; ' + str(latitude) + '; ' + str(longitude) + '; '
         saveFile.write(saveThis + '\n')
 
     if tweet.place:
@@ -124,7 +114,7 @@ for tweet in tweepy.Cursor(api.search, q ='#tweetdatapoint').items():
         print "==========="
 
         #save tweets
-        saveThis = str(moment) + '; ' + string.encode('utf8') + '; ' + user + '; ' + sentiment + '; ' + question + '; ' + place + '; ' + str(latitude) + '; ' + str(longitude) + '; '
+        saveThis = str(moment) + '; ' + str(string.encode('ascii', 'ignore')) + '; ' + user + '; ' + sentiment + '; ' + question + '; ' + place + '; ' + str(latitude) + '; ' + str(longitude) + '; '
         saveFile.write(saveThis + '\n')
 
     else:
@@ -163,7 +153,7 @@ for tweet in tweepy.Cursor(api.search, q ='#tweetdatapoint').items():
         print "==========="
 
         #save tweets
-        saveThis = str(moment) + '; ' + string.encode('utf8') + '; ' + user + '; ' + sentiment + '; ' + question + '; ' + place + '; ' + str(latitude) + '; ' + str(longitude) + '; '
+        saveThis = str(moment) + '; ' + str(string.encode('ascii', 'ignore')) + '; ' + user + '; ' + sentiment + '; ' + question + '; ' + place + '; ' + str(latitude) + '; ' + str(longitude) + '; '
         saveFile.write(saveThis + '\n')
 
 #close file

@@ -1,6 +1,6 @@
 # Example
 
-Using *tweet2csv.py* and *csv2cartodb.py* to generate a animated point data about the #AccordDeParis.
+Using *tweet2csv.py* and *csv2cartodb.py* to generate a animated point data map about the #AccordDeParis.
 
 ## tweet2csv.py
 

@@ -20,11 +20,11 @@ No modifcations were added to this script.
 ## Torque Cat
 
 After importing the *caraacara.csv* file to CartoDB, the dataset was slightly edited. Rows with values different
-from "Pedro Sanchez" and "Mariano Rajoy" within the candidate column were removed using the
-filter tool. The new dataset created from this query was saved. Finally, a Torque Cat map was generated using the 
+from "Pedro Sanchez" and "Mariano Rajoy" within the candidate column were removed using the filter tool. 
+The new dataset created from this query was saved. Finally, a Torque Cat map was generated using the 
 candidate column as the Category Column. 
 
-The resulting map can be seen [here](http://bit.ly/1RLi7Fm), also a screen shot (*map.png*) has been added to this repository.
+The resulting map can be seen [here](https://ramiroaznar.cartodb.com/viz/aca38362-a35d-11e5-946c-0ea31932ec1d/map), also a screen shot (*map.png*) has been added to this repository.
 
 ### Final thoughts
 

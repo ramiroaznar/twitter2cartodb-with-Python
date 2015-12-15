@@ -11,10 +11,10 @@ geolocator = Nominatim()
 from textblob import TextBlob
 
 #declare variables
-ckey = "CONSUMER_KEY"
-csecret = "CONSUMER_SECRET"
-atoken = "ACCESS_TOKEN"
-asecret = "ACCESS_SECRET"
+ckey = "SyTW5RSIptIAfl9CeWorlA9QT"
+csecret = "tR2o8yJVzzIfrUmJfWjXwLoVmfGAEhBXcbZniXlcjNhk4mfr2x"
+atoken = "32976838-QtWFoGnGC4Mjb49I75Ef2OBkmis80dHAtdnUFGhQr"
+asecret = "0C1oROu5YDVfmAtSQHKMQGFXNUeoldK4dzILiNNzUKPLm"
 
 OAUTH_KEYS = {'consumer_key':ckey, 'consumer_secret':csecret, 'access_token_key':atoken, 'access_token_secret':asecret}
 auth = tweepy.OAuthHandler(OAUTH_KEYS['consumer_key'], OAUTH_KEYS['consumer_secret'])
@@ -61,18 +61,27 @@ for tweet in tweepy.Cursor(api.search, q ='#CaraACara', count = '100', since_id 
                 sentiment = "positive"
             #print 'Sentiment: ', sentiment
             #candidate
-            mariano = ['@marianorajoy', 'Mariano', 'Rajoy']
-            pedro = ['@sanchezcastejon', 'Pedro', 'Sanchez']
+            mariano = ['@marianorajoy', 'Mariano', 'Rajoy', 'Mariano Rajoy']
+            pedro = ['@sanchezcastejon', 'Pedro', 'Sanchez', 'Pedro Sanchez']
             if any(x in string for x in mariano):
-                if any(x in string for x in pedro):
+                rajoy = "citado"
+            else:
+                rajoy = None
+            if any(x in string for x in pedro):
+                sanchez = "citado"
+            else:
+                sanchez = None
+            if rajoy is not None:
+                if sanchez is not None:
                     candidate = "Ambos"
                 else:
                     candidate = "Mariano Rajoy"
-            elif any(x in string for x in pedro):
-                candidate = "Pedro Sanchez"
-            else:
-                candidate = "Ninguno"
-            #print 'Candidate: ', candidate
+            elif rajoy is None:
+                if sanchez is not None:
+                    candidate = "Pedro Sanchez"
+                else:
+                    candidate = "Ninguno"
+            print "Candidate: ", candidate
             #location    
             place = geolocator.reverse(str(tweet.coordinates))
             #print 'Place: ', place
@@ -107,19 +116,28 @@ for tweet in tweepy.Cursor(api.search, q ='#CaraACara', count = '100', since_id 
             else:
                 sentiment = "positive"
             #print 'Sentiment: ', sentiment
-            #Candidate
-            mariano = ['@marianorajoy', 'Mariano', 'Rajoy']
-            pedro = ['@sanchezcastejon', 'Pedro', 'Sanchez']
+            #candidate
+            mariano = ['@marianorajoy', 'Mariano', 'Rajoy', 'Mariano Rajoy']
+            pedro = ['@sanchezcastejon', 'Pedro', 'Sanchez', 'Pedro Sanchez']
             if any(x in string for x in mariano):
-                if any(x in string for x in pedro):
+                rajoy = "citado"
+            else:
+                rajoy = None
+            if any(x in string for x in pedro):
+                sanchez = "citado"
+            else:
+                sanchez = None
+            if rajoy is not None:
+                if sanchez is not None:
                     candidate = "Ambos"
                 else:
                     candidate = "Mariano Rajoy"
-            if any(x in string for x in pedro):
-                candidate = "Pedro Sanchez"
-            else:
-                candidate = "Ninguno"
-            #print 'Candidate: ', candidate
+            elif rajoy is None:
+                if sanchez is not None:
+                    candidate = "Pedro Sanchez"
+                else:
+                    candidate = "Ninguno"
+            print "Candidate: ", candidate
             #location
             place = tweet.place.full_name
             #print 'Place:', place
@@ -138,3 +156,4 @@ for tweet in tweepy.Cursor(api.search, q ='#CaraACara', count = '100', since_id 
 #close file
 saveFile.close()
 print "---The End---"
+

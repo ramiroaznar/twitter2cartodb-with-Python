@@ -68,7 +68,7 @@ for tweet in tweepy.Cursor(api.search, q ='#CaraACara', count = '100', since_id 
                     candidate = "Ambos"
                 else:
                     candidate = "Mariano Rajoy"
-            if any(x in string for x in pedro):
+            elif any(x in string for x in pedro):
                 candidate = "Pedro Sanchez"
             else:
                 candidate = "Ninguno"

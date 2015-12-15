@@ -29,4 +29,5 @@ The resulting map can be seen [here](https://ramiroaznar.cartodb.com/viz/aca3836
 ### Final thoughts
 
 UnicodeDecodeErrors continue to appear. This was avoided using "Try/Except" loops and 'ignore' arguments. A better solution
-will be needed in the future.
+will be needed in the future. It was also necessary to edit more than usual the CartoDB dataset, thus renaming columns and
+even geocoding.

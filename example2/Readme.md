@@ -7,7 +7,7 @@ between president Mariano Rajoy and Pedro Sánchez, related to the hashtag #Cara
 
 I used *tweet2csv.py* with the following modifications:
 
-- all the print statements were commented to speed up the program,
+- all the print statements were commented to speed up the program except the "candidate" value,
 - a "try/except pass" loop was added to avoid UnicodeDecodeErrors,
 - the api search cursor parameters were q = '#CaraACara', since_id = '676506085855903744'* and count = '200'.
 

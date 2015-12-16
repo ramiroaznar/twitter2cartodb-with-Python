@@ -20,7 +20,15 @@ the instructions to generate a animated point data map using Torque.
 
 ## example
 
-Folder file containing:
+Example with the #AccordDeParis hashtag. Folder file containing:
+- readme.md,
+- tweets2csv.py modified,
+- csv2cartodb.py,
+- and map.png.
+
+## example2
+
+Example with the #CaraACara hashtag. Folder file containing:
 - readme.md,
 - tweets2csv.py modified,
 - csv2cartodb.py,
